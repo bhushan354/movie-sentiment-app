@@ -16,7 +16,7 @@ const SentimentForm = () => {
         const startTime = Date.now();
 
         try {
-            const res = await axios.post("http://127.0.0.1:8000/predict", { text: review });
+            const res = await axios.post("http://localhost:8000/predict", { text: review });
             const { sentiment, confidence } = res.data;
 
             const elapsed = Date.now() - startTime;
